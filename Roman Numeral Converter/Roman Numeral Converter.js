@@ -1,12 +1,7 @@
-const human = [ 1,   5,  10 , 50,  100, 500, 1000];
-const roman = ['I', 'V', 'X', 'L', 'C', 'D',  'M'];
+const human = [ 1 ,  4   , 5 ,  9  , 10,  40 , 50 ,  90 , 100, 400 , 500 , 900 , 1000];
+const roman = ['I', 'IV' ,'V', 'IX','X', 'XL', 'L', 'XC', 'C', 'CD', 'D' , 'CM', 'M'];
 
 function convertToRoman(num) {
-    
-    
-    let str = num.toSting();
-    if (str[str.length-1] === 4) {return}
-    if (str[str.length-1] === 9) {return} 
     if (human.includes(num)) { return roman[human.indexOf(num)]}
     if (num  <  0) {
         for(let i = 0; i < human.length ;i++) {
@@ -23,7 +18,3 @@ function convertToRoman(num) {
         }
     }
 }
-
-console.log(convertToRoman(29))
-console.log(convertToRoman(44))
-console.log(convertToRoman(204))

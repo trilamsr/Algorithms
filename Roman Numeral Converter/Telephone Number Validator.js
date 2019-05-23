@@ -1,0 +1,1 @@
+const regex = new RegExp(`\d*[( -]*\d{3,10}[) -]*`, 'g')
