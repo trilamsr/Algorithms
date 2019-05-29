@@ -13,6 +13,7 @@ class Search {
     }
     return -1;
   }
+  
   binaryIterative (target) {
 	let low = 0;
 	let high = this.dataSorted.length - 1;
@@ -28,5 +29,17 @@ class Search {
 	}
 	return -1;
     }
-    binaryRecursiveSearch () {}
+
+    binaryRecursiveSearch (target, low, high) {
+        const mid = Math.floor(low + (high-low)/2)
+        if (low > high) {
+            return -1;
+        }
+        if (this.data[mid] === target) { return mid;}
+        if (this.data[mid] > target) {
+            return this.binaryRecursiveSearch (this.data, target, low, mid-1)
+        } else if (this.data[mid] < target) {
+            return this.binaryRecursiveSearch (this.data, target, mid+1, high)
+        }
+    }
 }

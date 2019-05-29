@@ -1,3 +1,5 @@
+//INCOMPLETE
+
 const CURRENCY = {
     "PENNY"         :     1,
     "NICKEL"        :     5,
