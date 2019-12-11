@@ -15,6 +15,19 @@ function bubbleSort(array) {
   return array;
 }
 
+function bubbleSortWhile (arr) {
+  let isSorted = false;
+  while (!isSorted) {
+    isSorted = true;
+    for (let i = 0; i < array.length-2; i++) {
+      if (arr[i] > arr[i+1]) {
+        swap(arr, i, i+1)
+        isSorted = false;
+      }
+    }
+  }
+}
+
 function bubbleRecursive(array) {
   function inner(array, n) {
     if (n === 1) {
